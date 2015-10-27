@@ -1,0 +1,81 @@
+@font-face {
+	font-family : segoe;
+	src : url('../fonts/segoeui.ttf');
+}
+@font-face {
+	font-family : segoeBold;
+	src : url('../fonts/segoeuib.ttf');
+}
+
+// VARIABLE
+$segoe : segoe;
+$segoeBold : segoeBold;
+$white : #ffffff;
+$blue : #0090b2;
+
+body{
+	margin : 0;
+	padding : 0;
+	height:1900px;
+}
+
+.full-container{
+	position : relative;
+}
+
+.header-wrapper{
+	width : 100%;
+	min-height : 100vh;
+	background : url('../img/bg.jpg') no-repeat center 100%;
+	background-size:cover;	
+}
+
+.menu-wrapper{
+	width:100%;	
+	top:0;
+	margin:0;
+	padding:0;
+	text-align:right;
+	box-sizing:border-box;	
+	background-color:transparent;
+	-webkit-transition-duration : 0.5s;
+	transition-duration : 0.5s;
+}
+
+.animate{
+	-webkit-transition-duration : 0.5s;
+	transition-duration : 0.5s;
+	background-color:$white;
+	position:fixed;
+	box-shadow : 0px 0px 10px #555555;
+
+	a{
+		color:$blue;
+	}
+}	
+
+
+ul{
+	margin:0;
+	padding:0;	
+	display:inline-block;	
+	list-style:none;	
+	font: 1.1em $segoe; 	
+	text-transform:uppercase;
+	color:$white;
+
+	li{				
+		display:inline-block;		
+
+		a{
+			display:inline-block;			
+			text-decoration:none;
+			color:$white;
+			position:relative;
+			padding:20px;
+			margin:0;
+		}
+
+	}
+}
+

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="assets/style/normalize.css">
+		<link rel="stylesheet" href="assets/style/style.css">
+	</head>
+	<body>
+		<script src="assets/js/jquery-1.11.3.min.js"></script>
+		<section class="full-container header-wrapper">
+			<div class="menu-wrapper">
+				
+				<ul>
+					<li><a href="">landing</a></li>
+					<li><a href="">about</a></li>
+					<li><a href="">milestone</a></li>
+					<li><a href="">skill</a></li>
+					<li><a href="">contact</a></li>
+				</ul>
+				
+			</div>	
+
+			<div class="highlight-wrapper">
+				
+			</div>		
+		</section>
+
+		<script>
+			$(window).scroll(function(){
+				if($(window).scrollTop() > 0){
+					$('.menu-wrapper').addClass('animate')
+				}else{
+					$('.menu-wrapper').removeClass('animate')
+				}				
+			})
+		</script>
+	</body>
+</html>
