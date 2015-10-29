@@ -1,5 +1,7 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<head>
 		<title></title>
 		<link rel="stylesheet" href="assets/style/normalize.css">
@@ -7,17 +9,22 @@
 	</head>
 	<body>
 		<script src="assets/js/jquery-1.11.3.min.js"></script>
+		<script src="assets/js/typed.js"></script>
 		<section class="full-container header-wrapper">
 			<div class="menu-wrapper">
-				
-				<ul>
+				<button class="toggle-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>				
+				<ul class="main-menu">
 					<li><a href="">landing</a></li>
 					<li><a href="">about</a></li>
 					<li><a href="">milestone</a></li>
 					<li><a href="">skill</a></li>
+					<li><a href="">portfolio</a></li>
 					<li><a href="">contact</a></li>
-				</ul>
-				
+				</ul>				
 			</div>				
 
 			<div class="highlight-wrapper">
@@ -25,7 +32,55 @@
 				<div class="head-title">
 					i am fakhri shahab
 				</div>
+				<div class="head-job">
+					<span class="typed-job"></span>
+				</div>
+				<div class="head-resume-download">
+					<button>download resume</button>
+				</div>
 			</div>		
+		</section>
+
+		<section class="full-container">
+			<div class="header-section">
+				<div class="icon-header">
+					<i class="icon-about2 icon-rotate"></i>
+				</div>
+
+				<div class="title-section">
+					<h1>about me</h1>
+					<h3>front end developer</h3>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="full-container padding-b-70">
+			<div class="header-section bg-youngGrey bottom-caret">
+				<div class="icon-header">
+					<i class="icon-milestone icon-rotate"></i>
+				</div>
+
+				<div class="title-section">
+					<h1>milestone</h1>
+					<h3>education & experience</h3>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="full-container padding-b-70">
+			<div class="header-section bg-grey">
+				<div class="icon-header">
+					<i class="icon-skills icon-rotate"></i>
+				</div>
+
+				<div class="title-section">
+					<h1>skills</h1>
+					<h3>why you hire me?</h3>
+				</div>
+
+			</div>
 		</section>
 
 		<script>
@@ -36,6 +91,29 @@
 					$('.menu-wrapper').removeClass('animate')
 				}				
 			})
+
+			$(function(){
+		        $(".typed-job").typed({
+		            strings: ["front end developer", "ui/ux designer", "web designer"],		            
+		            typeSpeed: 130,
+		            loop : true,
+		            backDelay : 2000
+		        });
+		    });
+
+		    $('.toggle-btn').click(function(){
+		    	var el = $('.main-menu');
+		    	var isShow = el.hasClass('show-menu');
+		    	if(isShow == true){
+		    		$(this).removeClass('active')
+		    		el.removeClass('show-menu')
+		    		el.addClass('hide-menu')
+		    	}else{
+		    		$(this).addClass('active')
+		    		el.removeClass('hide-menu')
+		    		el.addClass('show-menu')
+		    	}
+		    })
 		</script>
 	</body>
 </html>

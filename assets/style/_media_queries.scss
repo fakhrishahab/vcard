@@ -1,0 +1,111 @@
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	body{
+		overflow-x : hidden;
+	}
+	.main-menu{
+		visibility : hidden;
+		top : 60px;		
+		position : fixed;
+		right : -200px;
+		width : 200px;
+		z-index:4;
+		background-color : $darkGrey;		
+
+		li{
+			display : block;
+			@include transition(0.3s);
+			a{				
+				padding : 10px;
+				color : $white;					
+			}
+			&:hover{
+				@include transition(0.3s);
+				background-color : $blue;
+				a {					
+					color : $white;
+				}
+			}
+			
+		}
+	}
+
+	.show-menu{
+		visibility : visible;
+		clear : both;
+		right : 20px;
+		@include transition(0.3s);
+	}
+
+	.hide-menu{
+		visibility : visible;
+		clear : both;
+		right : -200px;
+		@include transition(0.3s);
+	}
+
+	.toggle-btn{
+		visibility : visible;
+		@include transition(0.3s);
+		outline : none;
+		background-color : $darkGrey;
+
+		&:hover{
+			background-color : $blue;
+			@include transition(0.3s);		
+		}		
+	}
+
+	.active{
+		background-color : $blue;
+	}
+
+	.head-title{
+		font-size : 15pt;
+	}
+
+	.head-job{
+		font-size:25pt;
+	}
+
+	.highlight-wrapper{
+		padding-top:20vh;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.head-title{
+		font-size : 15pt;
+	}
+
+	.head-job{
+		font-size:21pt;
+		letter-spacing : 4pt;
+	}
+
+	h1{
+		font-size : 28pt;
+	}
+
+	h3{
+		font-size : 14pt;
+	}
+
+	.title-section{
+		.double-line{
+			width : 20px;
+		}
+	}
+
+	.highlight-wrapper{
+		img{
+			height : 200px;
+		}
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media only screen and (min-device-width : 768px) and (max-device-width : 979px) {
+	
+}

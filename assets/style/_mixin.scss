@@ -1,0 +1,25 @@
+@mixin transition($time){
+	-webkit-transition-duration : $time;
+	transition-duration : $time;
+	transition : $time;
+}
+
+@mixin margin-tb($unit){
+	margin : $unit 0;
+}
+
+@mixin padding-tb($unit){
+	padding : $unit 0;
+}
+
+@mixin padding-b($unit){
+	padding-bottom:$unit;
+}
+
+@mixin rotate($deg){
+	transform : rotate($deg);
+	-webkit-transform : rotate($deg);
+	-moz-transform : rotate($deg);
+	-o-transform : rotate($deg);
+	-ms-transform : rotate($deg);
+}
