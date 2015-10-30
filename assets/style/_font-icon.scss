@@ -39,23 +39,29 @@
 }
 
 .icon-about:before {
-  content: "\ab";
+  content: "\e000";
 }
 .icon-about2:before {
-  content: "b";
+  content: "\e001";
 }
 .icon-image:before {
-  content: "c";
+  content: "\e002";
 }
 .icon-note:before {
-  content: "d";
+  content: "\e003";
 }
 .icon-laptop:before {
-  content: "e";
+  content: "\e004";
 }
 .icon-milestone:before {
-  content: "f";
+  content: "\e005";
 }
 .icon-skills:before {
-  content: "g";
+  content: "\e006";
+}
+.icon-education:before {
+  content: "\e007";
+}
+.icon-career:before {
+  content: "\e008";
 }

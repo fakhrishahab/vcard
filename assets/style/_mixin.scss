@@ -23,3 +23,10 @@
 	-o-transform : rotate($deg);
 	-ms-transform : rotate($deg);
 }
+
+@mixin border-radius($unit){
+	border-radius : $unit;
+	-moz-border-radius : $unit;
+	-webkit-border-radius : $unit;
+	-o-border-radius : $unit;
+}

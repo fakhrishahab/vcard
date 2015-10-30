@@ -8,10 +8,21 @@ h1{
 	margin : 0;
 }
 
+h2{
+	font : 22pt $bebas;
+	margin : 0;
+	font-weight : bold;
+}
+
 h3{
 	font-size : 18pt;
 	margin : 0;
 	font : 18pt $bebasBook;
+}
+
+h4{
+	font : 14pt $bebas;	
+	margin : 0;
 }
 
 .bg-blue{
@@ -25,6 +36,13 @@ h3{
 }
 .bg-youngGrey{
 	background-color : $youngGrey;
+}
+.bg-babyGrey{
+	background-color : $babyGrey;
+}
+
+.font-blue{
+	color : $blue;
 }
 
 .padding-50{
@@ -50,6 +68,8 @@ body{
 	color:$white;
 	font:12pt $bebas;
 	overflow-y: scroll;	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .full-container{
@@ -279,6 +299,7 @@ body{
 		vertical-align : middle;
 		position:relative;
 		margin-top : 20px;
+		letter-spacing : 1.9pt;
 	}
 
 	.double-line{
@@ -307,6 +328,149 @@ body{
 		color : $blue;
 	}
 }
+
+.content-section{
+	padding : 20px 10%;
+	text-align:center;	
+	color : $darkGrey;	
+	letter-spacing : 1pt;
+
+	.about-idea{
+		margin:0;
+		padding:20px 0 0 0;
+		list-style:none;
+		display:inline-block;
+		box-sizing : border-box;
+
+		li{
+			display:inline-block;
+			font-size : 19pt;	
+			color : $smoothGrey;		
+
+			&:after{
+				content : '';
+				width : 10px;
+				height : 10px;
+				margin : 0 10px;
+				background-color : $blue;
+				position:relative;
+				display:inline-block;
+				@include border-radius(10px);
+				vertical-align:middle;					
+			}
+
+			&:last-child:after{
+				content : none;
+			}
+		}
+	}
+}
+
+.milestone-desc{
+	width : 700px;	
+	@include margin-tb(30px);
+	display:inline-block;
+	box-sizing : border-box;	
+	position:relative;	
+	padding:0;
+
+	&:before{
+		content : '';
+		display:inline-block;
+		position:absolute;		
+		width : 1px;
+		box-sizing:border-box;
+		top:2px;
+		bottom : 0;
+		left : 159px;
+		background-color : $smoothGrey;		
+	}
+}
+
+.milestone-detail{	
+	position:relative;	
+	width : 100%;
+	box-sizing : border-box;
+	padding:0;
+	margin : 0;
+	list-style : none;
+
+	li{
+		position:relative;
+		margin-bottom : 30px;
+		box-sizing:border-box;
+		padding:0;
+
+		&>div{
+			box-sizing:border-box;			
+			vertical-align : top;
+		}
+
+		&:last-child{
+			margin-bottom : 0;
+		}
+	}	
+}
+
+.milestone-year{
+	width : 120px;
+	display : inline-block;	
+	font : 28pt $bebas;
+	height : 50px;
+}
+
+.milestone-icon{
+	width : 40px;
+	height : 40px;
+	margin-right : 50px;
+	box-sizing : border-box;
+	position:relative;
+	display : inline-block;
+	background-color : $blue;
+	top : 8px;
+	@include rotate(45deg);
+
+	i{
+		font-size : 25pt;
+		color : $white;
+		margin : 4px 7px;
+	}
+}
+
+.milestone-wrappper-list{
+	width : 450px;
+	display : inline-block;
+	background-color : $youngGrey;
+	padding:0;	
+	min-height : 50px;
+	box-sizing:border-box;
+
+	&:after{
+		content : '';
+		display:block;
+		position : absolute;
+		top:8px;
+		right:465px;		
+		border-bottom: 20px solid transparent;
+		border-right: 20px solid $youngGrey;
+		border-top: 20px solid transparent;
+	}
+}
+
+.box-title{
+	position:relative;
+	box-sizing:border-box;
+	vertical-align:top;
+	text-align : left;
+	padding : 5px 10px;	
+	text-transform : capitalize;	
+
+	& a{
+		text-decoration : none;
+		color : $blue;
+	}
+}
+
 
 // IMPORTED STYLE
 @import 'media_queries';
