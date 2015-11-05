@@ -79,6 +79,18 @@
 .icon-career:before {
   content: "\e008"; }
 
+.icon-facebook:before {
+  content: "\e00a"; }
+
+.icon-linkedin:before {
+  content: "\e00b"; }
+
+.icon-skype:before {
+  content: "\e00c"; }
+
+.icon-email:before {
+  content: "\e009"; }
+
 h1 {
   font-size: 35pt;
   margin: 0; }
@@ -145,7 +157,8 @@ body {
   min-height: 100vh;
   background: url("../img/bg.jpg") no-repeat center 100%;
   background-size: cover;
-  margin: 0; }
+  margin: 0;
+  z-index: 3; }
   .header-wrapper:before {
     content: '';
     width: 100%;
@@ -168,6 +181,11 @@ body {
   transition: 0.7s; }
   .menu-wrapper a:hover {
     color: #00B4FC; }
+  .menu-wrapper li.active a {
+    color: #00B4FC;
+    -webkit-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    transition: 0.7s; }
 
 .toggle-btn {
   visibility: hidden;
@@ -489,6 +507,235 @@ body {
     text-decoration: none;
     color: #00B4FC; }
 
+.skills-wrapper {
+  background: url("../img/bg-skills.gif") 100% no-repeat;
+  background-position: center bottom;
+  background-size: cover; }
+  .skills-wrapper:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("../img/pattern.png");
+    position: absolute;
+    box-sizing: border-box; }
+  .skills-wrapper h1 {
+    color: #ffffff; }
+  .skills-wrapper .double-line, .skills-wrapper .title-section h1:before, .title-section .skills-wrapper h1:before, .skills-wrapper .title-section h1:after, .title-section .skills-wrapper h1:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    min-width: 50px;
+    max-width: 100px;
+    height: 5px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff; }
+
+.skill-list {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+  .skill-list li {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 28%;
+    margin: 20px; }
+    .skill-list li:last-child {
+      margin-bottom: 0; }
+
+div.skill-box {
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  position: relative;
+  padding: 3px; }
+  div.skill-box .skill-type {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    padding: 8px;
+    width: 0;
+    -webkit-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    transition: 0.7s; }
+  div.skill-box .skill-score {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 10px;
+    text-align: right; }
+
+.portfolio-wrapper {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+.portfolio-tab {
+  margin: 30px 0; }
+  .portfolio-tab ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: block; }
+    .portfolio-tab ul li {
+      position: relative;
+      display: inline-block;
+      font-size: 12pt;
+      margin: 0 10px 0; }
+      .portfolio-tab ul li a {
+        color: #1A1B1C;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #1A1B1C;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        transition: 0.3s; }
+      .portfolio-tab ul li:hover a, .portfolio-tab ul li.active a {
+        cursor: pointer;
+        background-color: #1A1B1C;
+        color: #ffffff;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        transition: 0.3s; }
+
+.flex_setting, .portfolio-list, .contact-section {
+  padding: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.portfolio-list {
+  width: 100%;
+  margin: 20px 0; }
+
+.portfolio-item {
+  width: 25%;
+  min-height: 5px;
+  max-height: 240px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center; }
+  .portfolio-item img {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+    position: relative; }
+  .portfolio-item:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .portfolio-item:hover:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0.8;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition: 0.3s; }
+  .portfolio-item:hover .portfolio-desc {
+    opacity: 1;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition: 0.3s; }
+
+.portfolio-desc {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  vertical-align: bottom;
+  box-sizing: border-box;
+  bottom: 0;
+  text-align: left;
+  padding: 10px 20px;
+  z-index: 2;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  transition: 0.3s; }
+  .portfolio-desc h2 {
+    color: #00B4FC; }
+  .portfolio-desc h4 {
+    color: #ffffff; }
+
+.contact-section {
+  margin: 30px 0 0 0;
+  position: relative;
+  background-color: #ededed; }
+
+.contact-left-wrapper {
+  width: 50%;
+  min-height: 400px;
+  max-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #ffffff url("../img/contact1.png") center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.contact-right-wrapper {
+  width: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative; }
+  .contact-right-wrapper .socmed-icon {
+    display: inline-block;
+    margin-top: 13%;
+    position: relative; }
+    .contact-right-wrapper .socmed-icon div {
+      margin: 20px 0; }
+    .contact-right-wrapper .socmed-icon ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .contact-right-wrapper .socmed-icon ul li {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 10px;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        transition: 0.3s;
+        font-size: 24pt; }
+        .contact-right-wrapper .socmed-icon ul li a {
+          text-decoration: none;
+          color: #1A1B1C; }
+        .contact-right-wrapper .socmed-icon ul li:hover, .contact-right-wrapper .socmed-icon ul li:hover a {
+          color: #00B4FC;
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          transition: 0.3s; }
+
+.padding-b-0 {
+  padding-bottom: 0; }
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body {
@@ -517,6 +764,8 @@ body {
         background-color: #00B4FC; }
         .main-menu li:hover a {
           color: #ffffff; }
+    .main-menu li.active a {
+      color: #ffffff; }
 
   .show-menu {
     visibility: visible;
@@ -557,9 +806,55 @@ body {
     font-size: 25pt; }
 
   .highlight-wrapper {
-    padding-top: 20vh; } }
+    padding-top: 20vh; }
+
+  .milestone-desc {
+    width: 100%; }
+    .milestone-desc:before {
+      content: none; }
+
+  .milestone-year {
+    width: 120px;
+    display: inline-block;
+    font: 28pt bebas;
+    height: 50px;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: border-box; }
+
+  .milestone-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px; }
+    .milestone-icon i {
+      font-size: 20pt;
+      color: #ffffff;
+      margin: 3px 6px; }
+
+  .milestone-wrappper-list {
+    width: 100%;
+    margin-top: 15px; }
+    .milestone-wrappper-list:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30px;
+      width: 0px;
+      left: 0;
+      border-bottom: 20px solid #CCCCCC;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent; }
+
+  .skill-list li {
+    width: 40%; }
+
+  .portfolio-item {
+    width: 50%;
+    min-height: 50px;
+    max-height: 240px; } }
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .head-title {
     font-size: 15pt; }
 
@@ -577,7 +872,25 @@ body {
     width: 20px; }
 
   .highlight-wrapper img {
-    height: 200px; } }
+    height: 200px; }
+
+  .skill-list li {
+    width: 100%;
+    margin: 10px 0; }
+
+  .portfolio-item {
+    width: 100%;
+    min-height: 50px;
+    max-height: 240px; }
+
+  .contact-left-wrapper {
+    width: 100%; }
+
+  .contact-right-wrapper {
+    width: 100%;
+    padding: 20px 0; }
+    .contact-right-wrapper .socmed-icon {
+      margin-top: -3%; } }
 /* Portrait tablet to landscape and desktop */
 
 /*# sourceMappingURL=style.css.map */

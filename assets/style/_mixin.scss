@@ -4,6 +4,20 @@
 	transition : $time;
 }
 
+@mixin transition-width($time){
+	-webkit-transition-duration : $time;
+	transition-duration : $time;
+	transition : $time;
+	transition-property: width;
+}
+
+@mixin transition-visibility($time){
+	-webkit-transition-duration : $time;
+	transition-duration : $time;
+	transition : $time;
+	transition-property: visibility;
+}
+
 @mixin margin-tb($unit){
 	margin : $unit 0;
 }

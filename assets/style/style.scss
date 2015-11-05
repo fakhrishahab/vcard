@@ -82,6 +82,7 @@ body{
 	background : url('../img/bg.jpg') no-repeat center 100%;
 	background-size:cover;
 	margin:0;
+	z-index:3;
 
 	&:before{
 		content : '';
@@ -106,6 +107,14 @@ body{
 
 	a:hover{
 		color:$blue;
+	}
+
+	li.active{
+		a{
+			color:$blue;
+			@include transition(0.7s);
+		}
+		
 	}
 }
 
@@ -450,7 +459,7 @@ body{
 		display:block;
 		position : absolute;
 		top:8px;
-		right:465px;		
+		right:465px;				
 		border-bottom: 20px solid transparent;
 		border-right: 20px solid $youngGrey;
 		border-top: 20px solid transparent;
@@ -471,6 +480,289 @@ body{
 	}
 }
 
+.skills-wrapper{
+	background : url('../img/bg-skills.gif') 100% no-repeat;
+	background-position:center bottom;
+	background-size : cover;
+		
 
+	&:before{
+		content : '';
+		width:100%;
+		height : 100%;		
+		display:block;
+		background : url('../img/pattern.png');
+		position:absolute;
+		box-sizing:border-box;		
+	}
+
+	h1{
+		color : $white;
+	}
+
+	.double-line{
+		content : '';		
+		display:inline-block;
+		position:relative;
+		vertical-align:middle;	
+		min-width : 50px;
+		max-width : 100px;
+		height : 5px;
+		border-top : 1px solid $white;
+		border-bottom : 1px solid $white;
+	}
+}
+
+.skill-list{
+	display : inline-block;
+	position:relative;
+	width : 100%;
+	list-style : none;
+	padding : 0;
+	margin : 0;	
+	box-sizing : border-box;
+
+	li{
+		box-sizing : border-box;
+		margin : 0;
+		padding:0;
+		display:inline-block;
+		width : 28%;		
+		margin : 20px;
+
+		&:last-child{
+			margin-bottom : 0;
+		}		
+	}
+}
+
+div.skill-box{			
+	box-sizing : border-box;
+	border:2px solid $white;
+	position:relative;	
+	padding:3px;		
+
+	& .skill-type{
+		box-sizing : border-box;
+		background-color : $white;
+		position:relative;	
+		text-align : left;				
+		vertical-align : middle;
+		padding:8px;
+		width : 0;		
+		@include transition(0.7s);	
+	}
+
+	& .skill-score{
+		box-sizing : border-box;
+		position:absolute;
+		top:0;
+		right:0;
+		color : $white;
+		padding:10px;
+		text-align : right;		
+	}
+}
+
+.portfolio-wrapper{
+	padding:0;
+	margin : 0 auto;	
+	box-sizing:border-box;
+}
+
+.portfolio-tab{
+	margin:30px 0;
+	
+	ul{
+		margin:0;
+		padding:0;
+		list-style:none;
+		position:relative;
+		display : block;
+
+		& li{
+			position:relative;
+			display:inline-block;
+			font-size : 12pt;
+			margin : 0 10px 0;
+
+			& a {
+				color : $darkGrey;
+				text-decoration : none;
+				padding : 5px 10px;
+				border:1px solid $darkGrey;
+				@include transition(0.3s);
+			}
+
+			&:hover,&.active{
+				a {
+					cursor : pointer;
+					background-color : $darkGrey;
+					color : $white;
+					@include transition(0.3s);
+				}
+			}
+		}
+	}
+}
+
+.flex_setting{
+	padding:0;	
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+.portfolio-list{
+	@extend .flex_setting;
+	width : 100%;	
+	margin: 20px 0;	
+}	
+
+.portfolio-item{
+	width : 25%;
+	min-height : 5px;
+	max-height : 240px;
+	padding:0;
+	position:relative;
+	overflow : hidden;
+	text-align : center;
+
+	& img{
+		margin : 0 auto;
+		padding:0;		
+		max-width : 100%;
+		height:auto;		
+		position:relative;
+	}
+
+	&:before{
+		content : '';
+		position:absolute;		
+		width : 100%;		
+		height : 100%;		
+	}
+
+	&:hover:before{
+		content : '';
+		position:absolute;
+		z-index:1;
+		background-color:#000;
+		opacity : 0.8;
+		@include transition(0.3s);
+	}
+
+	&:hover .portfolio-desc{
+		opacity : 1;
+		@include transition(0.3s);
+	}
+}
+
+.portfolio-desc{	
+	position:absolute;
+	width:100%;	
+	opacity : 0;
+	vertical-align:bottom;
+	box-sizing:border-box;
+	bottom:0;
+	text-align : left;
+	padding: 10px 20px;
+	z-index:2;
+	@include transition(0.3s);
+
+	& h2{
+		color : $blue;		
+	}
+
+	& h4{
+		color : $white;		
+	}
+}
+
+.contact-section{
+	margin:30px 0 0 0;
+	@extend .flex_setting;	
+	position:relative;	
+	background-color : $babyGrey;
+}
+
+.contact-left-wrapper{
+	width : 50%;
+	min-height : 400px;
+	max-height:100vh;
+	box-sizing : border-box;
+	position:relative;
+	background : $white url('../img/contact1.png')center;
+	background-repeat:no-repeat;
+	background-size : contain;
+
+	//& img{
+	//	width : 100%;
+	//	vertical-align : baseline;	
+	//	display:inline-block;
+	//	position:relative;
+	//}
+}
+
+.contact-right-wrapper{
+	width : 50%;
+	box-sizing : border-box;
+	display:inline-block;
+	
+	position:relative;
+
+	& .socmed-icon{
+		display:inline-block;
+		margin-top:13%;
+		position:relative;
+
+		& div{
+			margin:20px 0;
+		}
+
+		& ul{
+			margin : 0;
+			padding : 0;
+			list-style : none;
+
+			& li{
+				display:inline;
+				vertical-align:middle;
+				margin-right : 10px;
+				@include transition(0.3s);
+				font-size : 24pt;
+
+				& a{
+					text-decoration : none;
+					color : $darkGrey;
+				}
+
+				&:hover, &:hover a{
+					color : $blue;
+					@include transition(0.3s);
+				}
+			}
+		}
+	}
+}
+
+.padding-b-0{
+	padding-bottom:0
+}
 // IMPORTED STYLE
 @import 'media_queries';

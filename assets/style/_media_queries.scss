@@ -28,7 +28,14 @@
 			}
 			
 		}
+
+		li.active{
+			a{
+				color:$white;
+			}			
+		}
 	}
+
 
 	.show-menu{
 		visibility : visible;
@@ -71,10 +78,70 @@
 	.highlight-wrapper{
 		padding-top:20vh;
 	}
+
+	.milestone-desc{
+		width : 100%;
+
+		&:before{
+			content : none;
+		}
+	}
+
+	.milestone-year{
+		width : 120px;
+		display : inline-block;			
+		font : 28pt $bebas;
+		height : 50px;
+		position : relative;
+		vertical-align : middle;
+		box-sizing : border-box;
+	}
+
+	.milestone-icon{
+		width : 30px;
+		height : 30px;
+		position : absolute;
+		left : 5px;	
+
+		i{
+			font-size : 20pt;
+			color : $white;
+			margin : 3px 6px;
+		}	
+	}
+	.milestone-wrappper-list{
+		width : 100%;
+		margin-top : 15px;		
+
+		&:after{
+			content : '';
+			display:block;
+			position : absolute;
+			top:30px;
+			width : 0px;
+			left : 0;						
+			border-bottom: 20px solid $youngGrey;
+			border-right: 20px solid transparent;
+			border-left: 20px solid transparent;
+		}
+	}
+
+	.skill-list{		
+		li{
+			width : 40%;
+		}
+	}
+
+	.portfolio-item{
+		width : 50%;
+		min-height : 50px;
+		max-height : 240px;
+	}
+
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 540px) {
 	.head-title{
 		font-size : 15pt;
 	}
@@ -101,6 +168,31 @@
 	.highlight-wrapper{
 		img{
 			height : 200px;
+		}
+	}
+
+	.skill-list{		
+		li{
+			width : 100%;			
+			margin : 10px 0;
+		}
+	}
+
+	.portfolio-item{
+		width : 100%;
+		min-height : 50px;
+		max-height : 240px;
+	}
+
+	.contact-left-wrapper{
+		width : 100%;
+	}
+	.contact-right-wrapper{
+		width : 100%;
+		padding:20px 0;
+
+		& .socmed-icon{
+			margin-top :-3%;
 		}
 	}
 }

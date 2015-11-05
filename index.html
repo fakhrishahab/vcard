@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/touch-icon-152x152.png">
+	<link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico"/>
+	<meta name="author" content="Fakhri Shahab">
+    <meta name="description" content="Front End Developer, Web Designer, IT Business Development based in Indonesia "/>
+    <meta name="keywords" content="A Great Front End Developer based in Indonesia, Web Designer, UI and UX Designer, IT Business Development, Convert PSD to HTML"/>
 	<head>
-		<title></title>
+		<title>Fakhri Shahab </title>
 		<link rel="stylesheet" href="assets/style/normalize.css">
 		<link rel="stylesheet" href="assets/style/style.css">
 	</head>
-	<body>
+	<body data-spy="scroll">
 		<script src="assets/js/jquery-1.11.3.min.js"></script>
 		<script src="assets/js/typed.js"></script>
-		<section class="full-container header-wrapper">
+		<script src="assets/js/modernizr-2.8.3.min.js"></script>		
+		
+		<section class="full-container header-wrapper" id="landing">
 			<div class="menu-wrapper">
 				<button class="toggle-btn">
 					<span></span>
@@ -18,12 +32,12 @@
 					<span></span>
 				</button>				
 				<ul class="main-menu">
-					<li><a href="">landing</a></li>
-					<li><a href="">about</a></li>
-					<li><a href="">milestone</a></li>
-					<li><a href="">skill</a></li>
-					<li><a href="">portfolio</a></li>
-					<li><a href="">contact</a></li>
+					<li class="active" id="nav-landing"><a href="#landing">landing</a></li>
+					<li id="nav-about"><a href="#about">about</a></li>
+					<li id="nav-milestone"><a href="#milestone">milestone</a></li>
+					<li id="nav-skills"><a href="#skills">skills</a></li>
+					<li id="nav-portfolio"><a href="#portfolio">portfolio</a></li>
+					<li id="nav-contact"><a href="#contact">contact</a></li>
 				</ul>				
 			</div>				
 
@@ -41,7 +55,7 @@
 			</div>		
 		</section>
 
-		<section class="full-container">
+		<section class="full-container" id="about">
 			<div class="header-section">
 				<div class="icon-header">
 					<i class="icon-about2 icon-rotate"></i>
@@ -72,7 +86,7 @@ After discussing, i'll start to convert those design information into semantic H
 			</div>
 		</section>
 
-		<section class="full-container">
+		<section class="full-container" id="milestone">
 			<div class="header-section bg-youngGrey bottom-caret">
 				<div class="icon-header">
 					<i class="icon-milestone icon-rotate"></i>
@@ -93,7 +107,7 @@ After discussing, i'll start to convert those design information into semantic H
 								2007
 							</div>
 							<div class="milestone-icon">
-								<i class="icon-education icon-rotate"></i>
+								<i class="icon-rotate icon-education"></i>
 							</div>
 							<div class="milestone-wrappper-list">
 								<div class="box-title">
@@ -183,51 +197,271 @@ After discussing, i'll start to convert those design information into semantic H
 			
 		</section>
 
-		<section class="full-container">
+		<section class="full-container skills-wrapper" id="skills">
 			<div class="header-section">
 				<div class="icon-header">
-					<i class="icon-laptop icon-rotate"></i>
+					<i class="icon-skills icon-rotate"></i>
 				</div>
 
 				<div class="title-section">
 					<h1>skills</h1>
 					<h3>why you hire me?</h3>
 				</div>
-
+				
+				<div class="content-section skill-content-wrapper">
+				<ul class="skill-list">
+					<li>
+						<div class="skill-box">
+							<div style="width:80%" class="skill-type">javascript</div>
+							<div class="skill-score">80</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:90%" class="skill-type">jquery</div>	
+							<div class="skill-score">90</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:75%" class="skill-type">css/css3</div>	
+							<div class="skill-score">75</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:80%" class="skill-type">angular js</div>	
+							<div class="skill-score">80</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:60%" class="skill-type">php</div>	
+							<div class="skill-score">60</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:85%" class="skill-type">photoshop</div>	
+							<div class="skill-score">85</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:60%" class="skill-type">illustrator</div>	
+							<div class="skill-score">60</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:70%" class="skill-type">sass</div>
+							<div class="skill-score">70</div>	
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:50%" class="skill-type">node</div>
+							<div class="skill-score">50</div>	
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:60%" class="skill-type">code igniter</div>
+							<div class="skill-score">60</div>	
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:75%" class="skill-type">bootstrap</div>
+							<div class="skill-score">75</div>	
+						</div>
+					</li>
+					<li>
+						<div class="skill-box">
+							<div style="width:50%" class="skill-type">wordpress</div>
+							<div class="skill-score">50</div>	
+						</div>
+					</li>
+				</ul>
 			</div>
+			</div>			
 		</section>
 
-		<script>
-			$(window).scroll(function(){
-				if($(window).scrollTop() > 0){
-					$('.menu-wrapper').addClass('animate')
-				}else{
-					$('.menu-wrapper').removeClass('animate')
-				}				
-			})
+		<section class="full-container bg-babyGrey" id="portfolio">
+			<div class="header-section">
+				<div class="icon-header">
+					<i class="icon-laptop icon-rotate"></i>
+				</div>
 
-			$(function(){
-		        $(".typed-job").typed({
-		            strings: ["front end developer", "ui/ux designer", "web designer"],		            
-		            typeSpeed: 130,
-		            loop : true,
-		            backDelay : 2000
-		        });
-		    });
+				<div class="title-section">
+					<h1>portfolio</h1>
+					<h3>here is what i've done</h3>
+				</div>
+				
+				<div class="content-section portfolio-wrapper">
+					<div class="portfolio-tab">
+						<ul>
+							<li class="active"> <a data-filter="*">all</a></li>
+							<li> <a data-filter=".web">web</a></li>
+							<li> <a data-filter=".apps">apps</a></li>
+							<li> <a data-filter=".others">others</a></li>							
+						</ul>
+					</div>
+					<div class="portfolio-list" id="portfolio-list">
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>Portfolio Website</h2>
+								<h4>design, html/css</h4>
+							</div>
+							<img src="assets/img/portfolio/1.jpg" align="center">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>Portfolio Website</h2>
+								<h4>design, html/css</h4>
+							</div>
+							<img src="assets/img/portfolio/2.jpg" alt="">
+						</div>
+						<div class="portfolio-item others">
+							<div class="portfolio-desc">
+								<h2>EDM Pollux properties</h2>
+								<h4>Design (Photoshop), slicing</h4>
+							</div>
+							<img src="assets/img/portfolio/3.jpg" alt="">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>jack-id e-commerce website</h2>
+								<h4>design, html/css, jquery, codeigniter</h4>
+							</div>
+							<img src="assets/img/portfolio/4.jpg" alt="">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>company profile</h2>
+								<h4>wordpress</h4>
+							</div>
+							<img src="assets/img/portfolio/5.jpg" alt="">
+						</div>
+						<div class="portfolio-item others">
+							<div class="portfolio-desc">
+								<h2>edm pollux properties</h2>
+								<h4>design (photoshop), slicing</h4>
+							</div>
+							<img src="assets/img/portfolio/6.jpg" alt="">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>bandung mode e-commerce</h2>
+								<h4>design, html/css, php, mysql</h4>
+							</div>
+							<img src="assets/img/portfolio/7.jpg" alt="">
+						</div>
+						<div class="portfolio-item apps web">
+							<div class="portfolio-desc">
+								<h2>human resource management system</h2>
+								<h4>ui/ux design, html/css</h4>
+							</div>
+							<img src="assets/img/portfolio/8.jpg" alt="">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>startup product</h2>
+								<h4>design, html/css, wordpress</h4>
+							</div>
+							<img src="assets/img/portfolio/9.jpg" alt="">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>e-health product website</h2>
+								<h4>design, html/css, ui/ux design</h4>
+							</div>
+							<img src="assets/img/portfolio/10.jpg" alt="">
+						</div>
+						<div class="portfolio-item web">
+							<div class="portfolio-desc">
+								<h2>infokes e-health management system</h2>
+								<h4>design, html/css, ui/ux design</h4>
+							</div>
+							<img src="assets/img/portfolio/11.jpg" alt="">
+						</div>
+						<div class="portfolio-item apps">
+							<div class="portfolio-desc">
+								<h2>hris admin system</h2>
+								<h4>ui/ux design, html/css, javascript, jquery</h4>
+							</div>
+							<img src="assets/img/portfolio/12.jpg" alt="">
+						</div>
+						<div class="portfolio-item apps">
+							<div class="portfolio-desc">
+								<h2>infokes cloud</h2>
+								<h4>design, html/css</h4>
+							</div>
+							<img src="assets/img/portfolio/13.jpg" alt="">
+						</div>
+						<div class="portfolio-item apps">
+							<div class="portfolio-desc">
+								<h2>infokes apps</h2>
+								<h4>ui/ux design, html/css</h4>
+							</div>
+							<img src="assets/img/portfolio/14.jpg" alt="">
+						</div>
+						<div class="portfolio-item web apps">
+							<div class="portfolio-desc">
+								<h2>indigo awards web</h2>
+								<h4>design, html/css</h4>
+							</div>
+							<img src="assets/img/portfolio/15.jpg" alt="">
+						</div>
+						<div class="portfolio-item web apps">
+							<div class="portfolio-desc">
+								<h2>buzzbuddies</h2>
+								<h4>javascript, jquery, angular js, gulp, node</h4>
+							</div>
+							<img src="assets/img/portfolio/16.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>						
+		</section>
 
-		    $('.toggle-btn').click(function(){
-		    	var el = $('.main-menu');
-		    	var isShow = el.hasClass('show-menu');
-		    	if(isShow == true){
-		    		$(this).removeClass('active')
-		    		el.removeClass('show-menu')
-		    		el.addClass('hide-menu')
-		    	}else{
-		    		$(this).addClass('active')
-		    		el.removeClass('hide-menu')
-		    		el.addClass('show-menu')
-		    	}
-		    })
-		</script>
+		<section class="full-container" id="contact">
+			<div class="header-section padding-b-0">
+				<div class="icon-header">
+					<i class="icon-about icon-rotate"></i>
+				</div>
+
+				<div class="title-section">
+					<h1>contact</h1>
+					<h3>don't hesitate to contact me</h3>
+				</div>
+			</div>
+
+			<div class="content-section contact-section">
+				<div class="contact-left-wrapper">
+					
+				</div>
+				<div class="contact-right-wrapper">
+					<div class="socmed-icon">
+						<div><img src="assets/img/logo.png" width="100" alt=""></div>
+						<ul>
+							<li><a href="mailto:fakhri1804@gmail.com" title="fakhri1804@gmail.com"><i class="icon-email"></i></a></li>
+							<li><a href="http://www.facebook.com/fakhrishahab" target="_blank" title="fakhrisyahab"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/profile/view?id=AAIAABecMw8B6tbD9BWyBZ7XrX9QnjJ9BEJ-LcM" target="_blank" title="fakhri syahab"><i class="icon-linkedin"></i></a></li>
+							<li><i class="icon-skype" title="fakhri.shahab"></i></li>
+						</ul>
+						
+					</div>
+					<div>
+						copyright &copy; fakhrisyahab.com 2015
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="assets/js/isotope.pkgd.min.js"></script>
+		<script src="assets/js/script.js"></script>		
+		<script src="assets/js/jquery.nicescroll.min.js"></script>
+		
+		
 	</body>
 </html>
