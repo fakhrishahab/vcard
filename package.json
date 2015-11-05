@@ -1,0 +1,33 @@
+{
+  "name": "vcard",
+  "version": "1.0.0",
+  "description": "fakhri personal website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fakhrishahab/vcard.git"
+  },
+  "keywords": [
+    "fakhrishahab"
+  ],
+  "author": "fakhrishahab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fakhrishahab/vcard/issues"
+  },
+  "homepage": "https://github.com/fakhrishahab/vcard"
+}
