@@ -96,3 +96,7 @@ $('.portfolio-tab ul').on( 'click','a', function(e) {
 	// $(this).parent('li').addClass('active');
 	// $(this).parent('li').siblings().removeClass('active');
 });	
+
+function downloadResume(){
+	window.open(window.location + "files/resume_fakhrisyahab.pdf");
+};

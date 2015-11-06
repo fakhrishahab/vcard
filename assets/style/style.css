@@ -280,7 +280,8 @@ body {
     letter-spacing: 3pt;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    transition: 0.3s; }
+    transition: 0.3s;
+    outline: none; }
     .head-resume-download button:hover {
       background-color: #00B4FC;
       -webkit-transition-duration: 0.3s;
@@ -386,6 +387,9 @@ body {
     margin-left: 30px; }
   .title-section h3 {
     color: #00B4FC; }
+
+.about-container {
+  min-height: 80vh; }
 
 .content-section {
   padding: 20px 10%;
@@ -510,7 +514,8 @@ body {
 .skills-wrapper {
   background: url("../img/bg-skills.gif") 100% no-repeat;
   background-position: center bottom;
-  background-size: cover; }
+  background-size: cover;
+  min-height: 100vh; }
   .skills-wrapper:before {
     content: '';
     width: 100%;
